@@ -1,3 +1,5 @@
+package Pedrada.logic;
+
 public interface ModeradorGrupo {
     public void criar();
     public void apagar();

@@ -1,3 +1,5 @@
+package Pedrada.logic;
+
 import java.util.List;
 
 public class PedradaEvento extends Pedrada{
@@ -8,7 +10,7 @@ public class PedradaEvento extends Pedrada{
     private boolean status;
 
     public PedradaEvento(int id, String username, int carimboTempo, int gostos, List<Comentario> comentarios, String tipo, String data, String local, String entrada, boolean status) {
-        super(id, username, carimboTempo, gostos, comentarios);
+        super(username, carimboTempo, gostos, comentarios);
         this.tipo = tipo;
         this.data = data;
         this.local = local;

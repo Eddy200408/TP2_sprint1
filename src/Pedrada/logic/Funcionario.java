@@ -1,3 +1,5 @@
+package Pedrada.logic;
+
 public class Funcionario extends Isecmarini implements GestorEvento{
     private int uo;
     private String funcao;

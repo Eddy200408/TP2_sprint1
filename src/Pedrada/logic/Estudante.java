@@ -1,3 +1,5 @@
+package Pedrada.logic;
+
 public class Estudante extends Isecmarini implements GestorEvento{
     private int codigo;
     private String curso;
@@ -89,5 +91,16 @@ public class Estudante extends Isecmarini implements GestorEvento{
     @Override
     public void mudarVisibilidade() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Estudante{" +
+                "codigo=" + codigo +
+                ", curso='" + curso + '\'' +
+                ", anoMatricula=" + anoMatricula +
+                ", anoCurso=" + anoCurso +
+                ", status='" + status + '\'' +
+                "} " + super.toString();
     }
 }

@@ -1,3 +1,5 @@
+package Pedrada.logic;
+
 public class Alumini extends Estudante{
     private String trabalho;
     private String funcao;

@@ -1,3 +1,5 @@
+package Pedrada.logic;
+
 public abstract class Isecmarini implements MembroRede{
     private String username;
     private String email;

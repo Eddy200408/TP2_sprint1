@@ -1,7 +1,10 @@
+package Pedrada.logic;
+
 public abstract class Professor extends Isecmarini{
     private String area;
     private int grau;
     private int departamento;
+
 
     public Professor(String username, String email, String nome, String apelido, String alcunha, String password, String[] marins, int[] nhasPedrada, String visivel, String area, int grau, int departamento) {
         super(username, email, nome, apelido, alcunha, password, marins, nhasPedrada, visivel);
