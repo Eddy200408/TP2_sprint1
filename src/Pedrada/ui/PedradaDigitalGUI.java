@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class PedradaDigitalGUI extends JFrame {
     public static void main(String args[]) {
@@ -18,11 +17,13 @@ public class PedradaDigitalGUI extends JFrame {
 
         JPanel contentorLabel = new JPanel();
 
-        JTextArea text=new JTextArea(35,68);
-        JLabel Pedra= new JLabel("PedraDigital>", JLabel.LEFT);
-        JTextField campoPedra= new JTextField(50);
 
-        contentorLabel.add(text, BorderLayout.CENTER);
+        JTextArea text=new JTextArea(45,150);
+        JLabel Pedra= new JLabel("PedraDigital>", JLabel.LEFT);
+        JTextField campoPedra= new JTextField(130);
+
+
+        contentorLabel.add(text);
         contentorLabel.add(Pedra);
         contentorLabel.add(campoPedra);
 
@@ -40,19 +41,45 @@ public class PedradaDigitalGUI extends JFrame {
         //   gbc.anchor = GridBagConstraints.CENTER;
         gbc.weightx = 0.0;
 
+        LoginBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                    Login.main(new String[0]);
+                    janelaPrincipal.dispose();
+
+            }
+        });
+
+
         contentorBtn.add(LoginBtn, gbc);
 
         JButton ExecutBtn = new JButton("Executar");
         gbc.gridx = 0;
         gbc.gridy = 2;
 
+
         ExecutBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if(campoPedra.getText().equals("Criar Perfil")){
-                NovoPerfil.main(new String[0]);
+                if(campoPedra.getText().equals("Criar Perfil Estudante")){
+                    NovoPerfilEstudante.main(new String[0]);
+                    janelaPrincipal.dispose();
             }
+                else if(campoPedra.getText().equals("Criar Perfil Professor")){
+                    NovoPerfilProfessor.main(new String[0]);
+                    janelaPrincipal.dispose();
+                }
+                else if(campoPedra.getText().equals("Criar Perfil Funcionario")){
+                    NovoPerfilFuncionario.main(new String[0]);
+                    janelaPrincipal.dispose();
+                }
+                else if (campoPedra.getText().equals("Comentar")){
+                    Pedrada.main(new String[0]);
+                    janelaPrincipal.dispose();
+
+                }
                 else {
                     Erro.main(new String[0]);
                 }
@@ -79,4 +106,7 @@ public class PedradaDigitalGUI extends JFrame {
 
     }
 
+
 }
+
+

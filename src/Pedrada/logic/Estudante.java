@@ -16,10 +16,11 @@ public class Estudante extends Isecmarini implements GestorEvento{
         this.status = status;
     }
 
-    public Estudante(String helderSantos, String mail, String helder, String santos, String eddy, String coutinho, String yaaa, int i, String sim, int codigo, String engenhariaInformatica) {
-        super();
-    }
+    public Estudante(String username, String email, String password,  String curso) {
+        super(username, email, password);
 
+        this.curso = curso;
+    }
 
     public int getCodigo() {
         return codigo;

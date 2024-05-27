@@ -1,6 +1,6 @@
 package Pedrada.logic;
 
-public abstract class Professor extends Isecmarini{
+public class Professor extends Isecmarini{
     private String area;
     private int grau;
     private int departamento;
@@ -11,6 +11,11 @@ public abstract class Professor extends Isecmarini{
         this.area = area;
         this.grau = grau;
         this.departamento = departamento;
+    }
+
+    public Professor(String username, String email, String password, String area) {
+        super(username, email, password);
+        this.area = area;
     }
 
     public void mandaColegas(){

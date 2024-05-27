@@ -1,7 +1,11 @@
 package Pedrada.ui;
 
+import Pedrada.logic.Estudante;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class NovoPerfil extends JFrame {
     public static void main(String args[]) {
@@ -13,15 +17,6 @@ public class NovoPerfil extends JFrame {
         titulo.setForeground(Color.WHITE);
         titulo.setPreferredSize(new Dimension(800,50));
         titulo.setOpaque(true);
-
-        JPanel containerButton= new JPanel();
-        containerButton.setLayout(new GridLayout(1,2));
-
-        JButton cadastrar= new JButton("Cadastrar");
-        containerButton.add(cadastrar);
-
-        JButton limpar= new JButton("Limpar");
-        containerButton.add(limpar);
 
 
         JPanel form= new JPanel();
@@ -38,10 +33,10 @@ public class NovoPerfil extends JFrame {
 
         JLabel nome= new JLabel("Nome: ");
         JTextField campoNome= new JTextField(40);
+
         JLabel alcunha= new JLabel("Alcunha: ");
         JTextField campoAlcunha= new JTextField(40);
         form.add(email, constraints);
-
         constraints.gridx = 1;
         form.add(campoEmail, constraints);
 
@@ -59,6 +54,9 @@ public class NovoPerfil extends JFrame {
         constraints.gridx = 1;
         form.add(campoAlcunha, constraints);
 
+
+
+
         JPanel imgPerfil= new JPanel();
         imgPerfil.setLayout(new GridBagLayout());
         GridBagConstraints im = new GridBagConstraints();
@@ -75,6 +73,19 @@ public class NovoPerfil extends JFrame {
         icon.setOpaque(true);
         im.gridy=1;
         imgPerfil.add(icon,im);
+
+        JPanel containerButton= new JPanel();
+        containerButton.setLayout(new GridLayout(1,2));
+
+        JButton cadastrar= new JButton("Cadastrar");
+        containerButton.add(cadastrar);
+
+
+        JButton limpar= new JButton("Limpar");
+        containerButton.add(limpar);
+
+
+
 
         janelaCriarPerfil.setVisible(true);
         janelaCriarPerfil.setSize(800,650);

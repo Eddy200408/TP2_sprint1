@@ -23,8 +23,26 @@ public abstract class Isecmarini implements MembroRede{
         this.visivel = visivel;
     }
 
+    public Isecmarini(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
     public Isecmarini() {
 
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void singup(){

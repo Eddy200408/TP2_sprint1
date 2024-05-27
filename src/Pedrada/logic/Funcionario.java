@@ -10,6 +10,11 @@ public class Funcionario extends Isecmarini implements GestorEvento{
         this.funcao = funcao;
     }
 
+    public Funcionario(String username, String email, String password, String funcao) {
+        super(username, email, password);
+        this.funcao = funcao;
+    }
+
     public int getUo() {
         return uo;
     }

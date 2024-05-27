@@ -14,8 +14,8 @@ public class Aplicacao {
         ArrayList<Evento> eventos = new ArrayList<>();
 
 
-        Estudante estudante = new Estudante("HelderSantos", "htsantos@uta.cv", "Helder", "Santos",
-                "eddy", "coutinho", "yaaa", 20, "sim", 2021, "EngenhariaInformatica");
+        //Estudante estudante = new Estudante("HelderSantos", "htsantos@uta.cv", "Helder", "Santos",
+               // "eddy", "coutinho", "yaaa", 20, "sim", 2021, "EngenhariaInformatica");
         grupos.add(new Grupo(1, "Ativo"));
         eventos.add(new Evento(2, "Finalista","Festa"));
 
@@ -72,7 +72,7 @@ public class Aplicacao {
                             System.out.println("\n");
                             System.out.println("******************** ESTUDANTE ***********************");
                             System.out.println("\n");
-                            System.out.println(estudante);
+                            //System.out.println(estudante);
                             System.out.println("___________________________________________________");
 
 
